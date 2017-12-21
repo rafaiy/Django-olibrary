@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+{% extends 'student/librarynavbar.html' %}
+{% block body %}
+{% load staticfiles %}
+<link rel="stylesheet" type="text/css" href="{% static 'student/books.css' %}">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>category</title>
+</head>
+<body class="cbody">
+<ol class="citems">
+{% for eachbook in books %}
+
+<li class="citem">{{eachbook.title}}</li>
+    <p ><h3>Author</h3>{{eachbook.author}}</p>
+    <p ><h3>publisher</h3>{{eachbook.publisher}}</p>
+    <p ><img src = "../media/{{eachbook.cover}}" width=" 300" height="600" /> </p>
+    <br></br>
+
+
+<form method="post">
+        {% csrf_token %}
+  NAME: <input type="text" name="name" id="name"><br>
+
+
+  Comment:<br>
+  <textarea name="comment" id="comment"></textarea><br>
+
+  <input type="hidden" name="articleid" id="articleid" value="<? echo $_GET[&quot;id&quot;]; ?>">
+
+  <input type="submit" value="Submit">
+</form>
+
+{% endfor %}
+</ol>
+</body>
+</html>
+{% endblock %}

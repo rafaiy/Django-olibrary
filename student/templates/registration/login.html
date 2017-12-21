@@ -1,0 +1,36 @@
+
+<!DOCTYPE html>
+{% extends 'registration/base.html' %}
+{% block body %}
+{% load staticfiles %}
+
+
+<head>
+  <meta charset="UTF-8">
+
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <link rel="stylesheet" href="{% static 'student/login.css' %}">
+
+
+</head>
+
+<body>
+  <div class="login">
+  <h2>Log In</h2>
+    <form method="post">
+      {% csrf_token %}
+  <fieldset>
+    <input type="text" name = "username" placeholder="Email" />
+  	<input type="password" name = "password" placeholder="Password" />
+  </fieldset>
+  <input type="submit" value="Log In" />
+  <div class="utilities">
+    <a href="/forgotpass">Forgot Password?</a>
+    <a href="/signup">Sign Up &rarr;</a>
+  </div>
+  </form>
+  </div>
+</body>
+{% endblock %}
+</html>

@@ -1,0 +1,28 @@
+.mybody{
+	background-image: url(images/background2.jpg);
+	margin: 0;
+}
+.seprate{
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+	overflow: hidden;
+	background-color: black;
+	position: relative;
+}
+.sli{
+	float: left;
+	list-style-type: none;	
+	padding: 10px;
+	margin: inherit;
+}
+.sa{
+	display: block;
+	text-decoration: none;
+	text-align: center;
+	padding: 20px 10px;
+}
+.sli:hover{
+	background-color: grey;
+	font-size: 30px;
+}

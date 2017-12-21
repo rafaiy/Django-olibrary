@@ -1,0 +1,41 @@
+<!doctype html>
+{% load staticfiles %}
+
+<html>
+<head>
+	<link rel="icon" type="image/png" href="{% static 'student/images/icon.png' %}">
+	<title>Library</title>
+	<link rel="stylesheet" type="text/css" href="{% static 'student/libstyle.css' %}">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body class="mybody">
+	<ul class="seprate">
+		<li class="sli">
+			<a href="#" class="sa"><i class="fa fa-home"></i>  HOME</a>
+		</li>
+		<li class="sli">
+			<a href="/student/index/" class="sa"><i class="fa fa-align-justify"></i> CATEGORY</a>
+		</li>
+		<li class="sli">
+				<input type='text'/>
+				<i class="fa fa-search">
+				</i>
+		</li>
+		<li class="sli">
+			<a href="/student/index/add/" class="sa"><i class="fa fa-book"></i> ADD BOOK</a>
+		</li>
+		<li style="float:right" class="sli">
+
+			<a href="/logout/" class="sa">logout<<</a>
+		</li>
+		<li style="float:right" class="sli">
+			
+			<a href="#" class="sa"><i class="material-icons">contact_phone</i> Contact</a>
+		</li>
+
+	</ul>
+</body>
+{% block body %}
+{% endblock %}
+</html>

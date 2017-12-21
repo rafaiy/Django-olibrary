@@ -1,0 +1,18 @@
+{% extends 'student/librarynavbar.html' %}
+{% block body %}
+{% load staticfiles %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'student/index.css'%}">
+<link rel="stylesheet" type="text/css" href="{% static 'student/liststyle.css'%}">
+
+<ul class="items">
+{% for cat in allcategory %}
+
+    <li class="item">
+        <a class="click" href="/student/index/{{cat.id}}">{{cat}}</a>
+    </li>
+
+
+{% endfor %}
+    </ul>
+{% endblock %}

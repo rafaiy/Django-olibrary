@@ -1,0 +1,30 @@
+body{
+	margin: 0 0 0 0;
+	padding: 0;
+
+}
+
+.items{
+	padding: 0;
+	background-color: black;
+
+}
+ 
+.item{
+	
+	padding: 12px;	
+	list-style-type: none;
+	width: auto;
+	border: 1px solid grey;
+
+}
+.click{
+text-decoration: none;
+font-size: 30px;
+color: white;
+}
+
+.item:hover{
+background-color: grey;
+
+}
